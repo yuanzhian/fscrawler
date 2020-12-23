@@ -8,13 +8,16 @@ RUN apt-get update && apt-get install -y unzip wget
 
 WORKDIR /runtime
 
-ENV FS_BRANCH=es7-2.7-SNAPSHOT
-ENV FS_ZIP_FILE=fscrawler-es7-2.7-20190708.063133-40.zip
-RUN wget https://oss.sonatype.org/content/repositories/snapshots/fr/pilato/elasticsearch/crawler/fscrawler-es7/2.7-SNAPSHOT/$FS_ZIP_FILE
-RUN unzip $FS_ZIP_FILE
+ENV FS_BRANCH=fscrawler-2.6
+ENV FS_UPSTREAM=dadoonet
+
+#----------------------------
+RUN wget https://github.com/$FS_UPSTREAM/fscrawler/archive/$FS_BRANCH.zip
+RUN unzip $FS_BRANCH.zip
+
 WORKDIR /runtime/fscrawler-$FS_BRANCH
 
-ENV FSCRAWLER_VERSION=2.7-SNAPSHOT
+ENV FSCRAWLER_VERSION=2.6
 
 RUN mkdir -p /usr/share/fscrawler/config
 
