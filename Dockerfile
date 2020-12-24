@@ -15,7 +15,7 @@ RUN wget https://oss.sonatype.org/content/repositories/snapshots/fr/pilato/elast
 RUN unzip $FS_ZIP_FILE
 WORKDIR /runtime/fscrawler-$FS_BRANCH
 
-ENV FSCRAWLER_VERSION=es6-2.6-SNAPSHOT
+ENV FSCRAWLER_VERSION=2.6-SNAPSHOT
 
 RUN mkdir -p /usr/share/fscrawler/config
 
