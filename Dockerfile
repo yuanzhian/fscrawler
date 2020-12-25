@@ -42,4 +42,6 @@ COPY entry.sh /
 RUN chmod +x /entry.sh
 
 ENTRYPOINT ["/entry.sh"]
-CMD ["fscrawler", "--trace", "--rest", "--config_dir", "/usr/share/fscrawler/config", "myjob"]
+
+CMD ["fscrawler", "--trace", "--config_dir", "/usr/share/fscrawler/config", "code_search"]
+
