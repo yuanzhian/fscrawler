@@ -39,8 +39,8 @@ RUN mkdir /usr/share/fscrawler/config-mount \
 
 COPY entry.sh /
 
-COPY code_search /config-mount/code_search/
-COPY _settings.json /config/_default/6/
+COPY code_search /usr/share/fscrawler/config-mount/code_search/
+COPY _settings.json /usr/share/fscrawler/config/_default/6/
 
 RUN chmod +x /entry.sh
 
