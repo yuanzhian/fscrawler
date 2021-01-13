@@ -25,7 +25,7 @@ fs:
   follow_symlinks: false
 elasticsearch:
   nodes:
-  - url: "http://paas.cai-inc.com/api/zcycodees/"
+  - url: "http://10.8.25.140:9200"
   bulk_size: 100
   flush_interval: "5s"
   byte_size: "10mb"
