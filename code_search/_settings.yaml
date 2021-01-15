@@ -1,7 +1,8 @@
 ---
 name: "code_search"
 fs:
-  url: "/usr/share/fscrawler/data"
+  url: "/var/data/fscrawler_data/"
+  update_rate: "1m"
   update_rate: "1m"
   excludes:
   - "*/~*"
