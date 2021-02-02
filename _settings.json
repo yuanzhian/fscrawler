@@ -1,0 +1,50 @@
+{
+  "settings": {
+      "analysis": {
+          "analyzer": {
+              "by_smart": {
+                  "type": "custom",
+                  "tokenizer": "ik_smart",
+                  "filter": [
+                      "by_tfr",
+                      "by_sfr"
+                  ],
+                  "char_filter": [
+                      "by_cfr"
+                  ]
+              },
+              "by_max_word": {
+                  "type": "custom",
+                  "tokenizer": "ik_max_word",
+                  "filter": [
+                      "by_tfr",
+                      "by_sfr"
+                  ],
+                  "char_filter": [
+                      "by_cfr"
+                  ]
+              }
+          },
+          "filter": {
+              "by_tfr": {
+                  "type": "stop",
+                  "stopwords": [
+                      " "
+                  ]
+              },
+              "by_sfr": {
+                  "type": "synonym",
+                  "synonyms_path": "analysis/synonyms.txt"
+              }
+          },
+          "char_filter": {
+              "by_cfr": {
+                  "type": "mapping",
+                  "mappings": [
+                      "| => |"
+                  ]
+              }
+          }
+      }
+  }
+}
